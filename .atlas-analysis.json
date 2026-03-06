@@ -1,0 +1,125 @@
+{
+  "projectType": "api-service",
+  "projectName": "EazyWalls API",
+  "projectDescription": "RESTful API service for managing and serving wallpapers with categories, search, and admin features",
+  "theme": "palm",
+  "primaryColor": "#6366F1",
+  "lightColor": "#818CF8",
+  "darkColor": "#4F46E5",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Setup",
+            "pages": [
+              "setup/installation",
+              "setup/configuration",
+              "setup/database"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/data-models",
+              "concepts/error-handling"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/overview",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "Wallpapers",
+            "pages": [
+              "api/wallpapers/get-wallpapers",
+              "api/wallpapers/upload-wallpaper",
+              "api/wallpapers/update-wallpaper",
+              "api/wallpapers/delete-wallpaper",
+              "api/wallpapers/featured",
+              "api/wallpapers/trending"
+            ]
+          },
+          {
+            "group": "Categories",
+            "pages": [
+              "api/categories/get-categories",
+              "api/categories/create-category",
+              "api/categories/update-category",
+              "api/categories/delete-category"
+            ]
+          },
+          {
+            "group": "Search",
+            "pages": [
+              "api/search/search-content"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Integration",
+            "pages": [
+              "guides/cloudinary-setup",
+              "guides/image-upload",
+              "guides/filtering-wallpapers"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "guides/deployment/vercel",
+              "guides/deployment/environment-variables"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "RESTful API for wallpaper management",
+    "Category-based organization",
+    "Featured and trending wallpapers",
+    "Search functionality for wallpapers and categories",
+    "Cloudinary integration for image storage",
+    "MongoDB database with Mongoose ODM",
+    "Admin endpoints for content management"
+  ],
+  "publicApiSurface": [
+    "GET /api/v1/wallpaper",
+    "GET /api/v1/wallpaper/getNoFeatured",
+    "GET /api/v1/wallpaper/getNonTrending",
+    "GET /api/v1/category",
+    "GET /api/v1/search",
+    "POST /api/v1/admin/wallpaper",
+    "PATCH /api/v1/admin/wallpaper",
+    "PATCH /api/v1/admin/wallpaper/update",
+    "POST /api/v1/admin/category",
+    "PATCH /api/v1/admin/category",
+    "DELETE /api/v1/admin/category",
+    "POST /api/v1/admin/trending/add",
+    "PATCH /api/v1/admin/trending/remove",
+    "POST /api/v1/admin/featured/add",
+    "PATCH /api/v1/admin/featured/remove"
+  ]
+}
